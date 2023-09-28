@@ -97,7 +97,7 @@ class StatsView @JvmOverloads constructor(context: Context, attributesSet: Attri
         startAngle = -90F
         canvas.drawArc(oval, startAngle, 1F, false, paint)
 
-        //canvas.drawText("%2.f%%".format(newData.sum() * 100), center.x, center.y+textPaint.textSize/4, textPaint)
+        canvas.drawText("%.2f%%".format(newData.sum() * 100), center.x, center.y+textPaint.textSize/4, textPaint)
     }
 
     private fun generateRandomColor() = Random.nextInt(0xFF000000.toInt(), 0xFFFFFFFF.toInt())
