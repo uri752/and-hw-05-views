@@ -59,7 +59,7 @@ class StatsView @JvmOverloads constructor(context: Context, attributesSet: Attri
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
 
-        radius = min(w, h) / 2F - AndroidUtils.dp(context, 5)
+        radius = min(w, h) / 2F - lineWidth / 2
         center = PointF(w / 2F, h / 2F)
 
         oval = RectF(center.x - radius, center.y - radius,center.x + radius, center.y + radius )
